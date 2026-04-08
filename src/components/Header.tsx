@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Header() {
   const t = useTranslations('header');
@@ -17,13 +18,22 @@ export default function Header() {
   return (
     <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-xl sm:text-2xl font-bold text-teal-dark">
-            {t('title')}
-          </h1>
-          <p className="text-sm text-text-secondary hidden sm:block">
-            {t('subtitle')}
-          </p>
+        <div className="flex items-center gap-3">
+          <Image
+            src="/logo-icon.svg"
+            alt="Supply Lab"
+            width={36}
+            height={36}
+            className="shrink-0"
+          />
+          <div>
+            <h1 className="text-xl sm:text-2xl font-bold text-teal-dark">
+              {t('title')}
+            </h1>
+            <p className="text-sm text-text-secondary hidden sm:block">
+              {t('subtitle')}
+            </p>
+          </div>
         </div>
         <div className="flex items-center gap-2">
           <button
