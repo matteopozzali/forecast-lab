@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Forecast Lab — Supply Lab",
+    "description": "Educational forecasting benchmarking tool"
+  },
+  "header": {
+    "title": "Forecast Lab",
+    "subtitle": "Educational Forecasting Benchmarking Tool",
+    "tagline": "Supply Lab is an educational and exploratory tool designed to help users understand forecasting concepts, compare models, and learn from data through clear visual analysis. It is not intended to replace professional planning systems, internal company processes, or expert judgment."
+  },
+  "upload": {
+    "title": "Upload Your Data",
+    "description": "Upload a CSV or Excel file with date and value columns, or try a demo dataset.",
+    "dropzone": "Drag & drop your file here, or click to browse",
+    "formats": "Supported: .csv, .xlsx, .xls",
+    "or": "or try a demo dataset",
+    "demo_stable": "Stable Demand",
+    "demo_stable_desc": "Low variance, no strong trend or seasonality",
+    "demo_seasonal": "Seasonal Demand",
+    "demo_seasonal_desc": "Clear seasonal pattern with possible trend",
+    "demo_intermittent": "Intermittent Demand",
+    "demo_intermittent_desc": "Many zeros, sporadic spikes",
+    "sensitive_warning": "This file appears to contain personal or sensitive data. Forecast Lab is designed for anonymised, non-personal data only. Please remove sensitive columns and re-upload.",
+    "notice": "Your data is processed entirely in your browser. No file is uploaded to any server."
+  },
+  "health": {
+    "title": "Data Health Check",
+    "count": "Observations",
+    "min": "Min",
+    "max": "Max",
+    "mean": "Mean",
+    "stddev": "Std Dev",
+    "zeros": "Zero Count",
+    "outliers": "Outliers Detected",
+    "keep_all": "Keep All Data",
+    "exclude_outliers": "Exclude Outliers",
+    "warnings": "Warnings"
+  },
+  "sku": {
+    "select": "Select a series to analyze",
+    "compare": "Compare two SKUs side by side"
+  },
+  "dashboard": {
+    "frequency": "Frequency",
+    "horizon": "Forecast Horizon",
+    "best_model": "Best Model",
+    "mae": "MAE",
+    "bias": "Bias",
+    "daily": "Daily",
+    "weekly": "Weekly",
+    "monthly": "Monthly",
+    "unknown": "Unknown",
+    "periods": "periods"
+  },
+  "insights": {
+    "best_model_title": "Best Model",
+    "best_model_desc": "{model} wins with MAE of {mae}, beating runner-up ({runner}) by {diff}%.",
+    "bias_title": "Bias Signal",
+    "bias_over": "{model} tends to over-forecast by {value}. Consider a small safety stock reduction.",
+    "bias_under": "{model} tends to under-forecast by {value}. Consider increasing safety stock.",
+    "bias_neutral": "{model} shows very low bias — forecasts are well-centered."
+  },
+  "chart": {
+    "actuals": "Actuals",
+    "backtest_area": "Backtest Window",
+    "forecast": "Forecast",
+    "toggle_all": "Toggle All",
+    "show_top": "Show Top 2 Only"
+  },
+  "kpi": {
+    "title": "Model Comparison",
+    "model": "Model",
+    "mae": "MAE",
+    "bias": "Bias",
+    "rmse": "RMSE",
+    "mape": "MAPE",
+    "na": "N/A",
+    "best": "Best"
+  },
+  "backtest": {
+    "title": "What-If Backtest",
+    "description": "Change the backtest window to see how evaluation results vary. This shows that model ranking depends on how you measure.",
+    "periods": "periods"
+  },
+  "horizon": {
+    "title": "Forecast Horizon",
+    "description": "How many periods ahead to forecast with the best model."
+  },
+  "interpretation": {
+    "title": "Business Interpretation"
+  },
+  "didactic": {
+    "title": "Why This Result?",
+    "subtitle": "Learn from this analysis",
+    "what": "What this model does",
+    "why": "Why it matters",
+    "when_works": "When it works best",
+    "when_struggles": "When it struggles",
+    "assumption": "Key assumption",
+    "how_read": "How to read it in the dashboard",
+    "misconception": "Common misconception",
+    "plain": "In plain English",
+    "cross_benchmarks_title": "Why Simple Benchmarks Matter",
+    "cross_benchmarks": "Benchmarks like Naive and Seasonal Naive provide a credibility floor. If a complex model can't beat them, it's adding complexity without value. Always compare against the simplest option first.",
+    "cross_backtest_title": "Why Backtesting Matters",
+    "cross_backtest": "A model that looks good on training data may fail on unseen data. Backtesting simulates real forecasting conditions by hiding recent data and checking predictions against it. It's the closest thing to a real-world test before going live.",
+    "cross_metrics_title": "Why One Metric Is Never Enough",
+    "cross_metrics": "MAE tells you accuracy, but Bias tells you direction. A model with low MAE but high positive Bias will consistently over-forecast — leading to excess inventory. Always check both accuracy and direction.",
+    "cross_accuracy_title": "Why Forecasting Is Not Only About Accuracy",
+    "cross_accuracy": "A forecast is a decision-support tool. A slightly less accurate model with lower bias may be better for inventory planning than a more accurate one that systematically over- or under-shoots. Context matters.",
+    "cross_planner_title": "How to Think Like a Planner",
+    "cross_planner": "Planners don't just want a number — they want to understand risk, volatility, and trend direction. Use the forecast as a starting point, then layer in business knowledge: promotions, seasonality shifts, supply constraints."
+  },
+  "export": {
+    "csv": "Download KPI as CSV",
+    "pdf": "Download Report as PDF"
+  },
+  "disclaimer": {
+    "text": "Forecast Lab is an educational and exploratory tool. It is not intended to replace professional planning systems, internal company processes, or expert judgment. Results should be interpreted with care and validated by domain experts before any business decision."
+  },
+  "models": {
+    "naive": "Naive",
+    "seasonalNaive": "Seasonal Naive",
+    "movingAverage": "Moving Average",
+    "ses": "Exponential Smoothing (SES)",
+    "holt": "Holt (Double ES)",
+    "holtWinters": "Holt-Winters",
+    "croston": "Croston / SBA"
+  },
+  "modelCards": {
+    "naive": {
+      "what": "The Naive model simply takes the last observed value and uses it as the forecast for all future periods. No calculation, no parameters — just the most recent data point repeated forward.",
+      "why": "It's the simplest possible benchmark. If your more complex model can't beat Naive, it's not adding value. Every serious forecasting exercise should include this as a reference point.",
+      "when_works": "When demand is stable and doesn't change much from period to period. If values hover around a flat line, Naive can be surprisingly hard to beat.",
+      "when_struggles": "Anything with trend, seasonality, or high volatility. Naive can't anticipate change — it always assumes tomorrow looks exactly like today.",
+      "assumption": "The most recent observation is the best predictor of the future.",
+      "how_read": "On the hero chart, Naive appears as a flat horizontal line from the last historical value. If other models cluster around it, the data may be too stable for complex methods to improve on.",
+      "misconception": "That Naive is useless. In practice, it wins more often than people expect, especially on short, noisy, or intermittent series.",
+      "plain": "Imagine you're asked to guess tomorrow's demand. You look at what happened today and say: 'the same.' That's Naive. It sounds lazy, but it's actually a powerful baseline."
+    },
+    "seasonalNaive": {
+      "what": "Seasonal Naive takes the value from the same period in the previous season and uses it as the forecast. For monthly data with yearly seasonality, it forecasts January with last January's value.",
+      "why": "It captures pure seasonality without any statistical modelling. If your complex seasonal model can't beat Seasonal Naive, the pattern isn't strong enough to justify the complexity.",
+      "when_works": "When the data has a clear, repeating seasonal pattern — like monthly sales that peak every December, or weekly traffic that spikes every weekend.",
+      "when_struggles": "When seasonality is weak, irregular, or when there's a strong trend. If demand is growing year over year, repeating last year's exact value will always underestimate.",
+      "assumption": "The seasonal pattern repeats exactly from one cycle to the next, with no trend or level shift.",
+      "how_read": "On the chart, Seasonal Naive traces a pattern that mirrors the previous season. If it overlaps well with actuals, the data is dominated by a predictable cycle.",
+      "misconception": "That it's only for monthly data. Seasonal Naive works with any periodicity — daily with weekly patterns, weekly with yearly patterns, etc.",
+      "plain": "Instead of looking at yesterday, you look at the same day last year (or last cycle). If demand always follows the same calendar pattern, this simple trick works surprisingly well."
+    },
+    "movingAverage": {
+      "what": "Moving Average computes the average of the last N observations and uses it as the next forecast. The window size N is configurable (default: 3).",
+      "why": "It smooths out noise and short-term fluctuations, revealing the underlying level. It's the simplest way to filter volatility while remaining responsive to recent changes.",
+      "when_works": "When demand fluctuates randomly around a stable level. Moving Average excels at filtering noise when there's no trend or seasonality.",
+      "when_struggles": "When there's a trend (the average will lag behind) or seasonality (the average will blur seasonal peaks and troughs).",
+      "assumption": "Recent observations are equally important, and the underlying demand level is roughly constant.",
+      "how_read": "On the chart, Moving Average produces a smoother line than actuals. A larger window creates a smoother (but more lagged) line. If it tracks actuals well, the series is relatively stable.",
+      "misconception": "That a longer window is always better. A very long window over-smooths and reacts too slowly to genuine changes in demand level.",
+      "plain": "Add up the last few values, divide by how many there are. That's your forecast. It's like asking: 'what's the recent average?' — simple, but often effective on calm data."
+    },
+    "ses": {
+      "what": "Simple Exponential Smoothing (SES) forecasts by taking a weighted average of all past observations, where recent values get more weight. The decay rate is controlled by alpha (0 to 1).",
+      "why": "Unlike Moving Average, SES doesn't treat all recent observations equally — it gives a natural 'recency advantage' that adapts to the latest signal in the data.",
+      "when_works": "When demand has no trend or seasonality but the level may shift over time. SES adapts to level changes faster than a fixed-window moving average.",
+      "when_struggles": "Trending or seasonal data. SES has no mechanism for capturing either — it will systematically lag behind trends and miss seasonal patterns.",
+      "assumption": "The best forecast is a weighted combination of past values, with exponentially decreasing weights. The future level is similar to the recent past.",
+      "how_read": "SES produces a single flat forecast line forward. If alpha is high (close to 1), it reacts quickly to recent changes. If alpha is low, it's smoother and more conservative.",
+      "misconception": "That SES is just a fancier moving average. The exponential weighting makes it fundamentally different: it uses ALL history, not just a fixed window.",
+      "plain": "Imagine giving a score to each past observation: today gets the highest score, yesterday a bit less, the day before even less, and so on. SES computes a weighted average with exactly this logic."
+    },
+    "holt": {
+      "what": "Holt's method (Double Exponential Smoothing) extends SES by adding a trend component. It tracks both the level and the direction of change, using two smoothing parameters: alpha (level) and beta (trend).",
+      "why": "If demand is growing or declining over time, ignoring the trend leads to systematic bias. Holt captures the trajectory, not just the position.",
+      "when_works": "When demand has a clear upward or downward trend without strong seasonality. Holt shines on data where things are consistently getting bigger or smaller.",
+      "when_struggles": "On seasonal data (use Holt-Winters instead) or on flat data where adding a trend component adds complexity without benefit.",
+      "assumption": "Demand follows a locally linear trend. The rate of growth or decline is roughly constant over time.",
+      "how_read": "On the chart, Holt's forecast line slopes upward or downward (unlike SES, which is flat). If the slope matches the recent trajectory of actuals, the trend is well captured.",
+      "misconception": "That trend always means growth. Holt captures declining trends too. A negative beta means the model is forecasting shrinking demand.",
+      "plain": "SES says: 'the future looks like the recent average.' Holt adds: '...and it's heading in this direction at this speed.' It extrapolates the current momentum."
+    },
+    "holtWinters": {
+      "what": "Holt-Winters extends Holt's method by adding a seasonal component. It tracks level, trend, and recurring seasonal patterns using three parameters: alpha, beta, and gamma. It supports additive and multiplicative seasonality.",
+      "why": "Many real demand series have both trend and seasonal patterns. Holt-Winters is the classic method for capturing both simultaneously.",
+      "when_works": "When demand shows clear recurring patterns (e.g., monthly peaks, quarterly cycles) possibly combined with an upward or downward trend.",
+      "when_struggles": "On short series (needs at least 2 full seasonal cycles), on series without real seasonality, or when the seasonal pattern is highly irregular.",
+      "assumption": "Demand has three decomposable components: level, trend, and seasonality. The seasonal pattern repeats predictably.",
+      "how_read": "Holt-Winters produces a wavy forecast that mirrors the seasonal shape of historical data. If the waves match the actual peaks and troughs, the seasonal fit is good.",
+      "misconception": "That Holt-Winters always outperforms simpler models. On data without real seasonality, it can overfit the noise and perform worse than SES or even Naive.",
+      "plain": "It's like saying: 'demand is at this level, heading in this direction, and every December it spikes by this much.' It combines all three patterns into one forecast."
+    },
+    "croston": {
+      "what": "Croston's method is designed for intermittent demand — series with many zeros and sporadic non-zero values. It separately estimates the average demand size and the average interval between demands.",
+      "why": "Standard methods fail on intermittent data because they try to smooth sequences of zeros and spikes. Croston decomposes the problem into two tractable parts.",
+      "when_works": "Spare parts, slow-moving items, specialty products — any series where demand is mostly zero but occasionally spikes. The SBA (Syntetos-Boylan Approximation) variant corrects Croston's upward bias.",
+      "when_struggles": "On regular demand series with few or no zeros. It adds unnecessary complexity and often underperforms simpler methods on continuous data.",
+      "assumption": "Non-zero demand sizes and inter-arrival intervals are independent and roughly constant over time.",
+      "how_read": "Croston produces a flat forecast line (like SES), but at a level that accounts for the intermittency. Compare it to other models: on intermittent data, it should be closer to the actual average demand rate.",
+      "misconception": "That it predicts when the next non-zero demand will happen. It doesn't — it estimates the average rate over many periods.",
+      "plain": "Imagine a spare part that's needed roughly once every 5 weeks, and each time someone orders about 3 units. Croston says: 'expect about 3/5 = 0.6 units per week on average.' It separates 'how often' from 'how much.'"
+    }
+  }
+}

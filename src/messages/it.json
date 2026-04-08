@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "Forecast Lab — Supply Lab",
+    "description": "Strumento educativo di benchmarking previsionale"
+  },
+  "header": {
+    "title": "Forecast Lab",
+    "subtitle": "Strumento Educativo di Benchmarking Previsionale",
+    "tagline": "Supply Lab è uno strumento educativo ed esplorativo progettato per aiutare gli utenti a comprendere i concetti di forecasting, confrontare modelli e imparare dai dati attraverso analisi visive chiare. Non intende sostituire sistemi di pianificazione professionali, processi aziendali interni o il giudizio di esperti."
+  },
+  "upload": {
+    "title": "Carica i Tuoi Dati",
+    "description": "Carica un file CSV o Excel con colonne date e value, oppure prova un dataset demo.",
+    "dropzone": "Trascina il tuo file qui, o clicca per sfogliare",
+    "formats": "Supportati: .csv, .xlsx, .xls",
+    "or": "oppure prova un dataset demo",
+    "demo_stable": "Domanda Stabile",
+    "demo_stable_desc": "Bassa varianza, nessun trend o stagionalità marcata",
+    "demo_seasonal": "Domanda Stagionale",
+    "demo_seasonal_desc": "Pattern stagionale chiaro con possibile trend",
+    "demo_intermittent": "Domanda Intermittente",
+    "demo_intermittent_desc": "Molti zeri, picchi sporadici",
+    "sensitive_warning": "Questo file sembra contenere dati personali o sensibili. Forecast Lab è progettato per dati anonimizzati e non personali. Rimuovi le colonne sensibili e ricarica il file.",
+    "notice": "I tuoi dati vengono elaborati interamente nel browser. Nessun file viene caricato su alcun server."
+  },
+  "health": {
+    "title": "Controllo Qualità Dati",
+    "count": "Osservazioni",
+    "min": "Min",
+    "max": "Max",
+    "mean": "Media",
+    "stddev": "Dev. Std.",
+    "zeros": "Conteggio Zeri",
+    "outliers": "Outlier Rilevati",
+    "keep_all": "Mantieni Tutti i Dati",
+    "exclude_outliers": "Escludi Outlier",
+    "warnings": "Avvertenze"
+  },
+  "sku": {
+    "select": "Seleziona una serie da analizzare",
+    "compare": "Confronta due SKU affiancati"
+  },
+  "dashboard": {
+    "frequency": "Frequenza",
+    "horizon": "Orizzonte di Previsione",
+    "best_model": "Miglior Modello",
+    "mae": "MAE",
+    "bias": "Bias",
+    "daily": "Giornaliera",
+    "weekly": "Settimanale",
+    "monthly": "Mensile",
+    "unknown": "Sconosciuta",
+    "periods": "periodi"
+  },
+  "insights": {
+    "best_model_title": "Miglior Modello",
+    "best_model_desc": "{model} vince con MAE di {mae}, battendo il secondo ({runner}) del {diff}%.",
+    "bias_title": "Segnale di Bias",
+    "bias_over": "{model} tende a sovrastimare del {value}. Considera una riduzione del safety stock.",
+    "bias_under": "{model} tende a sottostimare del {value}. Considera un aumento del safety stock.",
+    "bias_neutral": "{model} mostra un bias molto basso — le previsioni sono ben centrate."
+  },
+  "chart": {
+    "actuals": "Valori Reali",
+    "backtest_area": "Finestra di Backtest",
+    "forecast": "Previsione",
+    "toggle_all": "Mostra/Nascondi Tutti",
+    "show_top": "Solo Top 2"
+  },
+  "kpi": {
+    "title": "Confronto Modelli",
+    "model": "Modello",
+    "mae": "MAE",
+    "bias": "Bias",
+    "rmse": "RMSE",
+    "mape": "MAPE",
+    "na": "N/D",
+    "best": "Migliore"
+  },
+  "backtest": {
+    "title": "What-If Backtest",
+    "description": "Cambia la finestra di backtest per vedere come variano i risultati. Questo mostra che il ranking dei modelli dipende da come si misura.",
+    "periods": "periodi"
+  },
+  "horizon": {
+    "title": "Orizzonte di Previsione",
+    "description": "Quanti periodi in avanti prevedere con il miglior modello."
+  },
+  "interpretation": {
+    "title": "Interpretazione Business"
+  },
+  "didactic": {
+    "title": "Perché Questo Risultato?",
+    "subtitle": "Impara da questa analisi",
+    "what": "Cosa fa questo modello",
+    "why": "Perché è importante",
+    "when_works": "Quando funziona bene",
+    "when_struggles": "Quando è in difficoltà",
+    "assumption": "Assunzione chiave",
+    "how_read": "Come leggerlo nella dashboard",
+    "misconception": "Errore comune",
+    "plain": "In parole semplici",
+    "cross_benchmarks_title": "Perché i Benchmark Semplici Contano",
+    "cross_benchmarks": "I benchmark come Naive e Seasonal Naive forniscono un livello minimo di credibilità. Se un modello complesso non riesce a batterli, sta aggiungendo complessità senza valore. Confronta sempre con l'opzione più semplice prima.",
+    "cross_backtest_title": "Perché il Backtesting è Importante",
+    "cross_backtest": "Un modello che sembra buono sui dati di training può fallire su dati non visti. Il backtesting simula condizioni di previsione reali nascondendo i dati recenti e verificando le previsioni. È il test più vicino alla realtà prima di andare in produzione.",
+    "cross_metrics_title": "Perché Una Metrica Non Basta Mai",
+    "cross_metrics": "Il MAE misura l'accuratezza, ma il Bias indica la direzione. Un modello con MAE basso ma Bias positivo alto sovrastimerà sistematicamente — causando eccesso di inventario. Controlla sempre sia accuratezza che direzione.",
+    "cross_accuracy_title": "Perché il Forecasting Non È Solo Accuratezza",
+    "cross_accuracy": "Una previsione è uno strumento di supporto alle decisioni. Un modello leggermente meno accurato ma con bias più basso può essere migliore per la pianificazione dell'inventario rispetto a uno più preciso che sistematicamente sovrastima o sottostima. Il contesto conta.",
+    "cross_planner_title": "Come Pensare da Planner",
+    "cross_planner": "I planner non vogliono solo un numero — vogliono capire rischio, volatilità e direzione del trend. Usa la previsione come punto di partenza, poi aggiungi la conoscenza del business: promozioni, cambi di stagionalità, vincoli di fornitura."
+  },
+  "export": {
+    "csv": "Scarica KPI come CSV",
+    "pdf": "Scarica Report come PDF"
+  },
+  "disclaimer": {
+    "text": "Forecast Lab è uno strumento educativo ed esplorativo. Non intende sostituire sistemi di pianificazione professionali, processi aziendali interni o il giudizio di esperti. I risultati devono essere interpretati con attenzione e validati da esperti di dominio prima di qualsiasi decisione aziendale."
+  },
+  "models": {
+    "naive": "Naive",
+    "seasonalNaive": "Seasonal Naive",
+    "movingAverage": "Media Mobile",
+    "ses": "Livellamento Esponenziale (SES)",
+    "holt": "Holt (Doppio ES)",
+    "holtWinters": "Holt-Winters",
+    "croston": "Croston / SBA"
+  },
+  "modelCards": {
+    "naive": {
+      "what": "Il modello Naive prende semplicemente l'ultimo valore osservato e lo usa come previsione per tutti i periodi futuri. Nessun calcolo, nessun parametro — solo il dato più recente ripetuto in avanti.",
+      "why": "È il benchmark più semplice possibile. Se il tuo modello complesso non riesce a battere il Naive, non sta aggiungendo valore. Ogni esercizio di forecasting serio dovrebbe includerlo come riferimento.",
+      "when_works": "Quando la domanda è stabile e non cambia molto da un periodo all'altro. Se i valori oscillano intorno a una linea piatta, il Naive può essere sorprendentemente difficile da battere.",
+      "when_struggles": "Qualsiasi serie con trend, stagionalità o alta volatilità. Il Naive non può anticipare cambiamenti — assume sempre che domani sia uguale a oggi.",
+      "assumption": "L'osservazione più recente è il miglior predittore del futuro.",
+      "how_read": "Nel grafico principale, il Naive appare come una linea orizzontale piatta dall'ultimo valore storico. Se gli altri modelli si raggruppano attorno ad essa, i dati potrebbero essere troppo stabili per beneficiare di metodi complessi.",
+      "misconception": "Che il Naive sia inutile. In pratica, vince più spesso di quanto ci si aspetti, specialmente su serie corte, rumorose o intermittenti.",
+      "plain": "Immagina che ti chiedano di indovinare la domanda di domani. Guardi cosa è successo oggi e dici: 'la stessa cosa.' Questo è il Naive. Sembra pigro, ma è in realtà una baseline potente."
+    },
+    "seasonalNaive": {
+      "what": "Il Seasonal Naive prende il valore dello stesso periodo nella stagione precedente e lo usa come previsione. Per dati mensili con stagionalità annuale, prevede gennaio con il valore di gennaio dell'anno scorso.",
+      "why": "Cattura la stagionalità pura senza alcuna modellazione statistica. Se il tuo modello stagionale complesso non riesce a battere il Seasonal Naive, il pattern non è abbastanza forte da giustificare la complessità.",
+      "when_works": "Quando i dati hanno un chiaro pattern stagionale ripetitivo — come vendite mensili che hanno un picco ogni dicembre, o traffico settimanale che aumenta ogni weekend.",
+      "when_struggles": "Quando la stagionalità è debole, irregolare, o quando c'è un trend forte. Se la domanda cresce anno dopo anno, ripetere il valore esatto dell'anno scorso sottostimerà sempre.",
+      "assumption": "Il pattern stagionale si ripete esattamente da un ciclo all'altro, senza trend o cambi di livello.",
+      "how_read": "Nel grafico, il Seasonal Naive traccia un pattern che rispecchia la stagione precedente. Se si sovrappone bene ai valori reali, i dati sono dominati da un ciclo prevedibile.",
+      "misconception": "Che funzioni solo per dati mensili. Il Seasonal Naive funziona con qualsiasi periodicità — giornaliera con pattern settimanali, settimanale con pattern annuali, ecc.",
+      "plain": "Invece di guardare ieri, guardi lo stesso giorno dell'anno scorso (o dell'ultimo ciclo). Se la domanda segue sempre lo stesso pattern del calendario, questo semplice trucco funziona sorprendentemente bene."
+    },
+    "movingAverage": {
+      "what": "La Media Mobile calcola la media delle ultime N osservazioni e la usa come previsione successiva. La finestra N è configurabile (default: 3).",
+      "why": "Liscia il rumore e le fluttuazioni a breve termine, rivelando il livello sottostante. È il modo più semplice per filtrare la volatilità rimanendo reattivi ai cambiamenti recenti.",
+      "when_works": "Quando la domanda fluttua casualmente intorno a un livello stabile. La Media Mobile eccelle nel filtrare il rumore quando non c'è trend né stagionalità.",
+      "when_struggles": "Quando c'è un trend (la media resterà indietro) o stagionalità (la media sfumerà picchi e valli stagionali).",
+      "assumption": "Le osservazioni recenti sono ugualmente importanti e il livello di domanda sottostante è approssimativamente costante.",
+      "how_read": "Nel grafico, la Media Mobile produce una linea più liscia dei valori reali. Una finestra più grande crea una linea più liscia (ma più in ritardo). Se segue bene i valori reali, la serie è relativamente stabile.",
+      "misconception": "Che una finestra più lunga sia sempre meglio. Una finestra molto lunga liscia troppo e reagisce troppo lentamente ai cambiamenti genuini nel livello di domanda.",
+      "plain": "Somma gli ultimi valori, dividi per quanti sono. Questa è la tua previsione. È come chiedere: 'qual è la media recente?' — semplice, ma spesso efficace su dati calmi."
+    },
+    "ses": {
+      "what": "Il Livellamento Esponenziale Semplice (SES) prevede calcolando una media ponderata di tutte le osservazioni passate, dove i valori più recenti hanno un peso maggiore. Il tasso di decadimento è controllato da alpha (da 0 a 1).",
+      "why": "A differenza della Media Mobile, il SES non tratta tutte le osservazioni recenti allo stesso modo — dà un vantaggio naturale alla recenza che si adatta all'ultimo segnale nei dati.",
+      "when_works": "Quando la domanda non ha trend né stagionalità ma il livello può cambiare nel tempo. Il SES si adatta ai cambiamenti di livello più velocemente di una media mobile a finestra fissa.",
+      "when_struggles": "Su dati con trend o stagionalità. Il SES non ha meccanismi per catturare nessuno dei due — resterà sistematicamente indietro rispetto ai trend e mancherà i pattern stagionali.",
+      "assumption": "La migliore previsione è una combinazione ponderata dei valori passati, con pesi esponenzialmente decrescenti. Il livello futuro è simile al passato recente.",
+      "how_read": "Il SES produce una singola linea di previsione piatta in avanti. Se alpha è alto (vicino a 1), reagisce rapidamente ai cambiamenti recenti. Se alpha è basso, è più liscio e conservativo.",
+      "misconception": "Che il SES sia solo una media mobile più sofisticata. La ponderazione esponenziale lo rende fondamentalmente diverso: usa TUTTA la storia, non solo una finestra fissa.",
+      "plain": "Immagina di dare un punteggio a ogni osservazione passata: oggi il più alto, ieri un po' meno, l'altro ieri ancora meno, e così via. Il SES calcola una media ponderata esattamente con questa logica."
+    },
+    "holt": {
+      "what": "Il metodo di Holt (Doppio Livellamento Esponenziale) estende il SES aggiungendo una componente di trend. Traccia sia il livello che la direzione del cambiamento, usando due parametri: alpha (livello) e beta (trend).",
+      "why": "Se la domanda cresce o diminuisce nel tempo, ignorare il trend porta a un bias sistematico. Holt cattura la traiettoria, non solo la posizione.",
+      "when_works": "Quando la domanda ha un chiaro trend ascendente o discendente senza forte stagionalità. Holt eccelle su dati dove le cose crescono o diminuiscono costantemente.",
+      "when_struggles": "Su dati stagionali (usa Holt-Winters) o su dati piatti dove aggiungere una componente di trend aggiunge complessità senza beneficio.",
+      "assumption": "La domanda segue un trend localmente lineare. Il tasso di crescita o declino è approssimativamente costante nel tempo.",
+      "how_read": "Nel grafico, la linea di previsione di Holt è inclinata verso l'alto o il basso (a differenza del SES, che è piatta). Se l'inclinazione corrisponde alla traiettoria recente dei valori reali, il trend è ben catturato.",
+      "misconception": "Che trend significhi sempre crescita. Holt cattura anche trend in declino. Un beta negativo significa che il modello prevede una domanda in diminuzione.",
+      "plain": "Il SES dice: 'il futuro assomiglia alla media recente.' Holt aggiunge: '...e si sta muovendo in questa direzione a questa velocità.' Estrapola il momentum attuale."
+    },
+    "holtWinters": {
+      "what": "Holt-Winters estende il metodo di Holt aggiungendo una componente stagionale. Traccia livello, trend e pattern stagionali ricorrenti usando tre parametri: alpha, beta e gamma. Supporta stagionalità additiva e moltiplicativa.",
+      "why": "Molte serie di domanda reali hanno sia trend che pattern stagionali. Holt-Winters è il metodo classico per catturare entrambi simultaneamente.",
+      "when_works": "Quando la domanda mostra pattern ricorrenti chiari (es. picchi mensili, cicli trimestrali) possibilmente combinati con un trend ascendente o discendente.",
+      "when_struggles": "Su serie corte (servono almeno 2 cicli stagionali completi), su serie senza vera stagionalità, o quando il pattern stagionale è altamente irregolare.",
+      "assumption": "La domanda ha tre componenti decomponibili: livello, trend e stagionalità. Il pattern stagionale si ripete in modo prevedibile.",
+      "how_read": "Holt-Winters produce una previsione ondulata che rispecchia la forma stagionale dei dati storici. Se le onde corrispondono ai picchi e alle valli reali, l'adattamento stagionale è buono.",
+      "misconception": "Che Holt-Winters batta sempre i modelli più semplici. Su dati senza vera stagionalità, può sovra-adattarsi al rumore e performare peggio del SES o anche del Naive.",
+      "plain": "È come dire: 'la domanda è a questo livello, si muove in questa direzione, e ogni dicembre ha un picco di questa entità.' Combina tutti e tre i pattern in una previsione."
+    },
+    "croston": {
+      "what": "Il metodo di Croston è progettato per la domanda intermittente — serie con molti zeri e valori non-zero sporadici. Stima separatamente la dimensione media della domanda e l'intervallo medio tra le domande.",
+      "why": "I metodi standard falliscono sui dati intermittenti perché cercano di lisciare sequenze di zeri e picchi. Croston decompone il problema in due parti trattabili.",
+      "when_works": "Ricambi, articoli a bassa rotazione, prodotti di nicchia — qualsiasi serie dove la domanda è per lo più zero ma occasionalmente ha dei picchi. La variante SBA (Syntetos-Boylan Approximation) corregge il bias positivo di Croston.",
+      "when_struggles": "Su serie di domanda regolari con pochi o nessuno zero. Aggiunge complessità non necessaria e spesso performa peggio dei metodi più semplici su dati continui.",
+      "assumption": "Le dimensioni della domanda non-zero e gli intervalli tra le domande sono indipendenti e approssimativamente costanti nel tempo.",
+      "how_read": "Croston produce una linea di previsione piatta (come il SES), ma a un livello che tiene conto dell'intermittenza. Confrontalo con gli altri modelli: sui dati intermittenti, dovrebbe essere più vicino al tasso di domanda medio reale.",
+      "misconception": "Che preveda quando avverrà la prossima domanda non-zero. Non lo fa — stima il tasso medio su molti periodi.",
+      "plain": "Immagina un ricambio che serve circa una volta ogni 5 settimane, e ogni volta ne ordinano circa 3 unità. Croston dice: 'aspettati circa 3/5 = 0.6 unità a settimana in media.' Separa il 'quanto spesso' dal 'quanto.'"
+    }
+  }
+}
